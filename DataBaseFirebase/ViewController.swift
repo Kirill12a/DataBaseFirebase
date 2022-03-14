@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseDatabase
 
+
 class ViewController: UIViewController {
   private let database = Database.database().reference()
   var vtext:[String: Any]?
@@ -22,8 +23,10 @@ class ViewController: UIViewController {
     }
 
     buttonSettings()
-
   }
+
+
+
 
   private func buttonSettings(){
     let button = UIButton(frame: CGRect(x: 20, y: 200, width: view.frame.size.width - 40, height: 50  ))
@@ -34,10 +37,16 @@ class ViewController: UIViewController {
     button.addTarget(self, action: #selector(addNewEntry), for: .touchUpInside)
   }
 
+
+
+
   private func labelMessage(){
     let label = UILabel()
     label.text = vtext!["something48"]  as? String
   }
+
+
+
 
 
   @objc func addNewEntry(){
